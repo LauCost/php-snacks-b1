@@ -22,6 +22,8 @@ $decimaGiornataBasket = [ // primo array che contiene le partite
     ]
   ];
 
+
+  /* var_dump($decimaGiornataBasket); */
 ?>
 
 
@@ -36,6 +38,19 @@ $decimaGiornataBasket = [ // primo array che contiene le partite
     <title>Document</title>
 </head>
 <body>
+
+<?php for ( $i = 0; $i < count($decimaGiornataBasket); $i++) {
+
+    ?> 
+
+    <p>
+      <?php echo $decimaGiornataBasket[$i]['casa'] ?> -
+      <?php echo $decimaGiornataBasket[$i]['ospite'] ?> |
+      <?php echo $decimaGiornataBasket[$i]['puntiCasa'] ?> -
+      <?php echo $decimaGiornataBasket[$i]['puntiOspite'] ?>
+    </p>
+
+    <?php } ?>
     
 </body>
 </html>
