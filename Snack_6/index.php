@@ -23,7 +23,7 @@
         ]
     ];
  
-    var_dump($db)
+    /* var_dump($db) */
 ?>
 
 
@@ -40,28 +40,24 @@
 
 <?php
 
-foreach($db as $data => $persone){
+foreach($db['teachers'] as $data => $teachers){
+    ?>
 
-    for($i = 0; $i < count($persone); $i++){
-
-        if($persone == 'teachers'){
-            ?>
-
-            <p class="red">
-                <?= $persone[$i]['name'] ?> -
-                <?= $persone[$i]['lastname'] ?>
+            <p class="teach">
+                <?= $teachers['name'] ?> -
+                <?= $teachers['lastname'] ?>
             </p>
             <?php
-        }else{
-            ?>
-            <p>
-                <?= $persone[$i]['name'] ?> -
-                <?= $persone[$i]['lastname'] ?>
+}
+foreach($db['pm'] as $data => $pm){
+    ?>
+            <p class="pm">
+                <?= $pm['name'] ?> -
+                <?= $pm['lastname'] ?>
             </p>
+ 
             <?php
         }
-    }
-}
     ?>
 </body>
 </html>

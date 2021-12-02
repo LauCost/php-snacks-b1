@@ -1,3 +1,11 @@
-.red{
-    border: 1px solid red;
+.teach{
+    border: 5px solid gray;
+    width: 50%;
+    text-align: center;
+}
+
+.pm{
+    border: 5px solid green;
+    width: 50%;
+    text-align: center;
 }
