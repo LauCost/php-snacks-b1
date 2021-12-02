@@ -2,9 +2,9 @@
 
 $name = $_GET['name'];
 $mail = $_GET['mail'];
-$age = $_GET['age'];
+$age = $_GET[age];
 
-
+ /* var_dump($name, $mail, $age); */
 
 ?>
 
@@ -18,5 +18,19 @@ $age = $_GET['age'];
 </head>
 <body>
     
+<?php if ( strlen($name)>3 && filter_var($mail, FILTER_VALIDATE_EMAIL) && filter_var($age, FILTER_VALIDATE_INT)){
+    ?>
+
+    <p style="font-size: 35px;">
+        Accesso riuscito
+    </p>
+<?php } else { ?>
+    <p style="font-size: 35px;">
+      Accesso Non riuscito
+    </p>
+<?php } ?>
+
+
+
 </body>
 </html>
