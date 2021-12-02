@@ -33,6 +33,7 @@ $numeri = array_slice($numeri, 0, 15);
     <?php
     }
     ?>
+    
 </ul>
 </body>
 </html>
