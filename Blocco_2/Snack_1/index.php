@@ -52,8 +52,8 @@ foreach( $ads as $data => $ad){
 ?>
 
         <div>
-            <img src="<?= $newAds[0]['image_path'] ?>" alt="">
-            <a href="<?= $newAds[0]['link'] ?>"></a>
+            
+            <a href="<?= $newAds[0]['link'] ?>"><img src="<?= $newAds[0]['image_path'] ?>" alt=""></a>
         </div>
 
 </div> 
