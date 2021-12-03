@@ -29,27 +29,31 @@ $ads = [
 
 ];
 
+shuffle($ads);
+
+/* var_dump($ads) */
+
 ?>
 
 
 <div>
 
 <?php 
-
+$newAds = [];
 foreach( $ads as $data => $ad){
 
     if( $ad["is_active"] == true){
-        ?>
 
-        <div>
-            <img src="<?= $ad['image_path'] ?>" alt="">
-            <a href="<?= $ad['link'] ?>"></a>
-        </div>
+        array_push($newAds, $ad);
 
-        <?php
     }
 }
 
 ?>
 
-</div>
+        <div>
+            <img src="<?= $newAds[0]['image_path'] ?>" alt="">
+            <a href="<?= $newAds[0]['link'] ?>"></a>
+        </div>
+
+</div> 
